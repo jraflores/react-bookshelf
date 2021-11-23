@@ -7,15 +7,9 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App-header, .list-books-title {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +18,110 @@
   color: white;
 }
 
-.App-link {
+input {
+  width: 90%;
+  padding: 5px 10px;
+  font-size: 1.25em;
+  border: 1pt solid #cccccc;
+  outline: none;
+}
+
+input:focus {
+  border: 1pt solid #282c34;
+}
+
+button {
+  padding: 5px;
+  font-size: 1.25em;
+  outline: none;
+}
+
+button:enabled {
+  cursor: pointer;
+}
+
+.books-menu-bar {
+  background-color: #282c34;
+  padding-bottom: 10pt;
+  font-size: large;
+}
+
+.books-menu-bar .App-link {
   color: #61dafb;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-decoration: none;
+}
+
+.bookshelf-title {
+  background-color: #282c34;
+  color: white;
+  padding: 5pt;
+}
+
+.bookshelf, .search-books, .books-shelf-manage, .grid {
+  margin: 20pt;
+}
+
+.bookshelf-books::after, .grid::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.book, .grid-item {
+  float: left;
+  padding: 10pt;
+  margin: 10pt;
+  width: 250px;
+  min-width: 150px;
+  height: 400px;
+  min-height: 400px;
+  align-items: center;
+  border-radius: 25px;
+  border: 1pt solid #282c34;
+  box-shadow: 3px 3px #282c34;
+}
+
+.grid-item {
+  width: 200px;
+  min-width: 100px;
+  height: 100px;
+  min-height: 50px;
+}
+
+.book .book-cover {
+  width: 100%;
+  height: 193px;
+  min-width: 150px;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.book .book-shelf-changer {
+  width: 100%;
+  align-items: center;
+  padding-top: 5pt;
+}
+
+.book .book-authors {
+  font-weight: bold;
+}
+
+.book .book-authors p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.books-shelf-list {
+  align-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
