@@ -66,7 +66,7 @@ class BookSearch extends React.Component {
                         <DebounceInput debounceTimeout={300}
                             type="text" placeholder="Search by title or author" 
                             value={query}
-                            onChange={(event) => this.handleSearch(event.target.value)}/>
+                            onChange={(event) => this.searchBooks(event.target.value)}/>
                     </div>
                 </div>
                 <div className="search-books-results">
