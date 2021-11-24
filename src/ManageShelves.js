@@ -40,6 +40,7 @@ class ManageShelves extends Component {
                 false : true;
     }
 
+    // reference https://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case
     camelCase = (str) => {
         return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
           return index === 0 ? word.toLowerCase() : word.toUpperCase();
